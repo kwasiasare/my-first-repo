@@ -113,7 +113,7 @@ const sumArray = (numbers) => {
   let result = 0;
   for (const number of numbers) {
   //console.log(number)
-  result = result + number
+  result += number
  }
   return {result}
 }
@@ -136,12 +136,60 @@ const max = (numbers) => {
   console.log(max([1, 2, 3, 9, 41]))
   
 const letterFrequency = (phrase) => {
+	// letterFrequency('haha') = {'h': 2, 'a': 2}
   console.log(phrase)
+  // Make a frequency Object {}
+  let frequency = {}
   for (const letter of phrase) {
-   console
+	  // check if letter exist in frequency
+	  if (letter in frequency) {
+		// increment the value to 1
+		 frequency[letter]++ 
+	   // otherwise set value to 1
+	  } else {
+		  frequency[letter] = 1
+	  }
+  }
+    return frequency
+}	
+ 
+console.log(letterFrequency('haha, i am getting the underlying principles, hahahahah'))
+
+
+const wordFrequency = (phrase) => {
+
+    const words = phrase.split (' ')
+	// call letterFrequency
+	return letterFrequency(words)
+   }
   
+console.log(wordFrequency('haha , haha lol lol lol lol i am getting the underlying principles, hahahahah'))
+
+
+//map
+
+// not running in vscode[1, 2, 3, 4].map (number => console.log(number))
+
+let result = [1, 2, 3, 4].map(number => number *2)
+console.log(result)
+
+const doubleMap = (numbers) => {
+	return numbers.map(number => number * 2)
 }
+console.log(doubleMap([1, 2, 3]))
 
-console.log(letterFrequency('haha'))
-   
 
+// filter
+const filter = (numbers, greaterThan) => {
+	let result = []
+	for (const number of numbers) {
+		if (number > greaterThan) {
+			result.push(number)
+		}
+	}
+	return result
+}
+console.log(filter([1, 2, 3, 4, 5, 6], 3))
+
+const kays = [1, 2, 3, 4, 5, 6, 7]
+console.log(kays.filter(kay => kay > 3))
