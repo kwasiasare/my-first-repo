@@ -101,7 +101,7 @@ const letterCounter = () => {
    let result = 0;
    
    for (const index in phrase) {
-     //console.log(Number(index) + 1)
+     console.log(Number(index) + 1)
      result = Number(index) + 1
    }
    return {result}
@@ -112,7 +112,7 @@ console.log(letterCounter())
 const sumArray = (numbers) => {
   let result = 0;
   for (const number of numbers) {
-  //console.log(number)
+  console.log(number)
   result += number
  }
   return {result}
@@ -170,8 +170,8 @@ console.log(wordFrequency('haha , haha lol lol lol lol i am getting the underlyi
 
 // not running in vscode[1, 2, 3, 4].map (number => console.log(number))
 
-let result = [1, 2, 3, 4].map(number => number *2)
-console.log(result)
+//let result = [1, 2, 3, 4].map(number => number *2)
+//console.log(result)
 
 const doubleMap = (numbers) => {
 	return numbers.map(number => number * 2)
@@ -194,4 +194,17 @@ console.log(filter([1, 2, 3, 4, 5, 6], 3))
 const kays = [1, 2, 3, 4, 5, 6, 7]
 console.log(kays.filter(kay => kay > 5))
 
-//test branch
+const actors = [
+	{name: 'johnny', networth: 1200000},
+	{name: 'amber', networth: 10021000},
+	{name: 'leonardo', networth: 52100000},
+]
+
+console.log(actors.filter(actor => actor.networth > 100000))
+let networth1 = actors.reduce((a, b) => a + b.networth, 0)
+console.log(networth1)
+
+//Reduce
+const array = [1, 2, 3, 4]
+const resulta = array.reduce((a, b) => a + b)
+console.log(resulta)
