@@ -1,4 +1,4 @@
-//Functions
+Functions
 
 function sum(a , b) {
 	return a + b
@@ -19,24 +19,24 @@ function mul(a , b) {
 //let result = sum(30,4)
 //console.log(result)
 
-let result2 = sum(4,6) + sub(9,7) + div(3,2) + mul(2,10)
-console.log(result2)
+//let result2 = sum(4,6) + sub(9,7) + div(3,2) + mul(2,10)
+//console.log(result2)
 
 //Arrow functions
-const sumArrow = (a, b) => a + b
-console.log(sumArrow(10, 50))
+//const sumArrow = (a, b) => a + b
+//console.log(sumArrow(10, 50))
 
-const subArrow = (a , b) => a - b
-console.log(subArrow(10 , 50))
+//const subArrow = (a , b) => a - b
+//console.log(subArrow(10 , 50))
 
-const divArrow = (a , b) => a / b
-console.log(divArrow(10, 2))
+//const divArrow = (a , b) => a / b
+//console.log(divArrow(10, 2))
 
-const mulArrow = (a , b) => a * b
-console.log(mulArrow(10, 2))
+//const mulArrow = (a , b) => a * b
+//console.log(mulArrow(10, 2))
 
-let result3 = mulArrow(10, 2) + sumArrow(22, 98) + divArrow(10, 2)
-console.log(result3)
+//let result3 = mulArrow(10, 2) + sumArrow(22, 98) + divArrow(10, 2)
+//console.log(result3)
 
 //Objects
 const person = {
@@ -46,9 +46,9 @@ shirt: 'Green',
 trousers: 'black',
 phone: '+233-544-332025'
 }
-console.log(person.phone)
-console.log(person)
-console.log(person.fname)
+//console.log(person.phone)
+//console.log(person)
+//console.log(person.fname)
 
 
 const introducer = (name, shirt, assets, liabilities) => {
@@ -67,7 +67,7 @@ const introducer = (name, shirt, assets, liabilities) => {
   return intro
 
 }
-console.log(introducer('kwasi' , 'Blue', 80000, 20000))
+//console.log(introducer('kwasi' , 'Blue', 80000, 20000))
 
 
 const fruits = ['🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐']
@@ -90,8 +90,8 @@ const double = () => {
  return result
 }
 
-console.log(numbers)
-console.log(double([]))
+//console.log(numbers)
+//console.log(double([]))
 
 
 
@@ -101,25 +101,25 @@ const letterCounter = () => {
    let result = 0;
    
    for (const index in phrase) {
-     console.log(Number(index) + 1)
+  //   console.log(Number(index) + 1)
      result = Number(index) + 1
    }
    return {result}
  }
  
-console.log(letterCounter())
+//console.log(letterCounter())
 
 const sumArray = (numbers) => {
   let result = 0;
   for (const number of numbers) {
-  console.log(number)
+  //console.log(number)
   result += number
  }
   return {result}
 }
 
 const nums = [1, 3, 4, 5, 7, 9]
-console.log(sumArray(nums)) 
+//console.log(sumArray(nums)) 
  
  
 const max = (numbers) => {
@@ -133,11 +133,11 @@ const max = (numbers) => {
     return {result}
   }
   
-  console.log(max([1, 2, 3, 9, 41]))
+  //console.log(max([1, 2, 3, 9, 41]))
   
 const letterFrequency = (phrase) => {
 	// letterFrequency('haha') = {'h': 2, 'a': 2}
-  console.log(phrase)
+  //console.log(phrase)
   // Make a frequency Object {}
   let frequency = {}
   for (const letter of phrase) {
@@ -153,7 +153,7 @@ const letterFrequency = (phrase) => {
     return frequency
 }	
  
-console.log(letterFrequency('haha, i am getting the underlying principles, hahahahah'))
+//console.log(letterFrequency('haha, i am getting the underlying principles, hahahahah'))
 
 
 const wordFrequency = (phrase) => {
@@ -163,7 +163,7 @@ const wordFrequency = (phrase) => {
 	return letterFrequency(words)
    }
   
-console.log(wordFrequency('haha , haha lol lol lol lol i am getting the underlying principles, hahahahah'))
+//console.log(wordFrequency('haha , haha lol lol lol lol i am getting the underlying principles, hahahahah'))
 
 
 //map
@@ -176,7 +176,7 @@ console.log(wordFrequency('haha , haha lol lol lol lol i am getting the underlyi
 const doubleMap = (numbers) => {
 	return numbers.map(number => number * 2)
 }
-console.log(doubleMap([1, 2, 3]))
+//console.log(doubleMap([1, 2, 3]))
 
 
 // filter
@@ -189,10 +189,10 @@ const filter = (numbers, greaterThan) => {
 	}
 	return result
 }
-console.log(filter([1, 2, 3, 4, 5, 6], 3))
+//console.log(filter([1, 2, 3, 4, 5, 6], 3))
 
 const kays = [1, 2, 3, 4, 5, 6, 7]
-console.log(kays.filter(kay => kay > 5))
+//console.log(kays.filter(kay => kay > 5))
 
 const actors = [
 	{name: 'johnny', networth: 1200000},
@@ -200,11 +200,16 @@ const actors = [
 	{name: 'leonardo', networth: 52100000},
 ]
 
-console.log(actors.filter(actor => actor.networth > 100000))
+//console.log(actors.filter(actor => actor.networth > 100000))
 let networth1 = actors.reduce((a, b) => a + b.networth, 0)
-console.log(networth1)
+//console.log(networth1)
 
 //Reduce
 const array = [1, 2, 3, 4]
 const resulta = array.reduce((a, b) => a + b)
 console.log(resulta)
+
+const randomSelectFromArray = () => {
+  fruits = [ 'banana', 'apple', 'mango', 'guava']
+}
+console.log(fruits)
