@@ -73,7 +73,7 @@ console.log(introducer('kwasi' , 'Blue', 80000, 20000))
 const fruits = ['🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐', '🍌', '🍎', '🍊', '🍐']
 
 for (let i=0; i < fruits.length; i++) {
-  // console.log(fruits[i])
+  console.log(fruits[i])
 }
 
 for (const fruit of fruits) {
@@ -208,3 +208,75 @@ console.log(networth1)
 const array = [1, 2, 3, 4]
 const resulta = array.reduce((a, b) => a + b)
 console.log(resulta)
+
+const randomAnomaa = (anomaa) => { 
+  const randomNumber =
+  Math.floor(Math.random() * anomaa.length)
+
+  console.log(randomNumber)
+  return anomaa[randomNumber]
+
+}
+anomaa = ['mango', 'banana', 'apple', 'pawpaw', 'pear'];
+ 
+
+console.log(randomAnomaa(anomaa))
+
+
+const weatherScorer = (weather, weather1) => {
+  let score
+  if (weather == 'rainy' && weather1 == 'overcast') {
+  score = 2
+} else if (weather == 'rainy') {
+  score = 1
+  } else if (weather == 'sunny') {
+    score = -1
+ 
+} else {
+  score = 0
+}
+return score
+}
+console.log(weatherScorer('rainy', 'overcast'))
+  
+
+DOM MANIPULATION
+
+console.log('hello')
+
+let titleDiv = document.getElementById('title')
+
+console.log('before: ', titleDiv.innerText)
+
+let message = 'Square Color Counter 🚀'
+
+titleDiv.innerText = message;
+
+console.log('after: ', titleDiv.innerText)
+
+titleDiv.innerHTML = `<p>${message}</p>`
+
+titleDiv.style.backgroundColor = 'blue'
+
+const squares = document.querySelectorAll('.colorSquare')
+
+// forEach
+const timesClicked = {'red': 0, 'yellow': 0, 'green': 0}
+squares.forEach(square => {
+  square.onclick = () => {
+    timesClicked[square.value] += 1
+    square.innerText = timesClicked[square.value]
+  }
+})
+function clearScores() {
+  timesClicked.red = 0
+  timesClicked.yellow = 0
+  timesClicked.green = 0
+  squares.forEach(square => {
+    square.innerText = ''
+  })
+}
+
+const clearGameBtn = document.getElementById('clear-game')
+clearGameBtn.onclick = () => clearScores()
+
